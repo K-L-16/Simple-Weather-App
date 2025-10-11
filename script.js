@@ -14,9 +14,7 @@ async function UpdateWeather(city) {
         document.querySelector('.weather').style.display = "none";
     } else {
         var data = await response.json();
-
         updateTime(data);
-
         console.log(data);
 
         document.querySelector('.city').innerHTML = data.name;
@@ -50,6 +48,7 @@ function updateTime(data) {
     const card = document.querySelector('.card');
 
     const hour = new Date((current + data.timezone) * 1000).getUTCHours();
+
 
     if (hour > 23 || hour < 5) {
         card.style.background = 'linear-gradient(135deg, #0f2027, #203a43, #2c5364)';
