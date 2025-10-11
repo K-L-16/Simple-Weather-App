@@ -141,3 +141,9 @@ body{
     font-family: 'Poppins', sans-serif;
     display: none;
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        transform: scale(0.8);
+        transform-origin: top center;
+    } }
