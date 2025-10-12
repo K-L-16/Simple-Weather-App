@@ -142,8 +142,17 @@ body{
     display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
     body {
-        transform: scale(0.8);
+        transform: scale(0.7);
         transform-origin: top center;
-    } }
+    } 
+}
+
+@media  screen and (max-width: 250px) {
+    body {
+            transform: scale(0.3);
+            transform-origin: top center;
+        }
+    
+}
