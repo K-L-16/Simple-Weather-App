@@ -9,7 +9,7 @@ const weatherIcon = document.querySelector('.weather-icon');
 async function UpdateWeather(city) {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
 
-    if (response.status === 404) {
+    if (response.status === 404 || response.status === 400) {
         document.querySelector('.error').style.display = "block";
         document.querySelector('.weather').style.display = "none";
     } else {
@@ -30,11 +30,11 @@ async function UpdateWeather(city) {
         } else if (data.weather[0].main === "Clear") {
             weatherIcon.src = "images/clear.png";
         } else if (data.weather[0].main === "Rain") {
-            weatherIcon.src = "iamges/rain.png"
+            weatherIcon.src = "images/rain.png"
         } else if (data.weather[0].main === "Drizzle") {
-            weatherIcon.src = "iamges/drizzle.png"
+            weatherIcon.src = "images/drizzle.png"
         } else if (data.weather[0].main === "Mist") {
-            weatherIcon.src = "iamges/mist.png"
+            weatherIcon.src = "images/mist.png"
         }
 
         document.querySelector('.weather').style.display = "block";
@@ -49,8 +49,10 @@ function updateTime(data) {
 
     const hour = new Date((current + data.timezone) * 1000).getUTCHours();
 
+    console.log(hour)
 
-    if (hour > 23 || hour < 5) {
+
+    if (hour >= 23 || hour < 5) {
         card.style.background = 'linear-gradient(135deg, #0f2027, #203a43, #2c5364)';
         card.style.color = "#fff";
     } else if (hour >= 5 && hour < 12) {

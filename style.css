@@ -16,7 +16,7 @@ body{
     width: 90%;
     max-width: 470px;
     color: #fff;
-    margin: 40px auto 0;
+    margin: 30px auto 0;
     border-radius: 20px;
     padding: 14px 35px;
     font-size: 35px;
@@ -81,7 +81,7 @@ body{
 }
 
 .search button:hover img {
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: transform 0.2s ease;
 }
 
