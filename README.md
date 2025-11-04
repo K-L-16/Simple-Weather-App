@@ -1,14 +1,15 @@
 # Simple-Weather-App
 
-## A simple weather app built with HTML, CSS, and Vanilla JavaScript. It fetches real-time data from the OpenWeatherMap API and displays current weather details.
+## A simple weather app in two flavors: Vanilla (HTML/CSS/JS) and React. Both fetch real-time data from OpenWeatherMap API, display temperature, humidity, and wind speed, and auto-switch background (day/night).
 
 This project is a simple weather app. It fetches real-time weather data from the OpenWeatherMap API based on city names. The app displays temperature, humidity, and wind speed, 
 automatically adjusts the background gradient according to the local time (day or night). 
 It also includes error handling for invalid city inputs and a responsive layout for mobile and desktop screens.
 
-* Create a weather app with HTML, CSS, and Vanilla JavaScript.
+* Create a weather app with HTML, CSS, and Vanilla JavaScript (Already add the react version React + Vite + Fetch).
 * Fetches data from OpenWeatherMap API by city name.
-* A good example of practicing web front-end basics.
+* A good example of practicing web front-end.
+
 
 ## Here is the link to the project/demo
 
